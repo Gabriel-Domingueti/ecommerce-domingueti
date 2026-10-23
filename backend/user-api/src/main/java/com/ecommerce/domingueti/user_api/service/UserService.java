@@ -4,17 +4,18 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ecommerce.domingueti.user_api.dto.UserDTO;
 import com.ecommerce.domingueti.user_api.model.User;
 import com.ecommerce.domingueti.user_api.repository.UserRepository;
 
+import lombok.RequiredArgsConstructor;
+
 @Service
+@RequiredArgsConstructor 
 public class UserService {
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public List<UserDTO> getAll() {
         List<User> users = userRepository.findAll();

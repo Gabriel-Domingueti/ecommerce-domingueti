@@ -4,12 +4,21 @@ import java.util.Date;
 
 import com.ecommerce.domingueti.user_api.model.User;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public class UserDTO {
+    @NotBlank
     private String nome;
+    @NotBlank
     private String endereco;
+    @NotBlank 
     private String cpf;
+    @NotBlank 
     private String email;
+    @NotBlank
     private String telefone;
+    @NotNull 
     private Date dataCadastro;
 
     public String getNome() {
