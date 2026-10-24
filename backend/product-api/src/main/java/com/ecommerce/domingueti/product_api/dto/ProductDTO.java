@@ -13,7 +13,7 @@ public class ProductDTO {
     @NotBlank 
     private String descricao;
     @NotNull 
-    private double preco;
+    private Double preco;
     @NotNull 
     private CategoryDTO category;
 
@@ -38,10 +38,10 @@ public class ProductDTO {
         this.nome = nome;
     }
 
-    public double getPreco() {
+    public Double getPreco() {
         return preco;
     }
-    public void setPreco(double preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 

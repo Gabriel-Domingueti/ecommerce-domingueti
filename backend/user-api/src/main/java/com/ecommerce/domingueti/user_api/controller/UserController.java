@@ -30,7 +30,7 @@ public class UserController {
    }
     
    @GetMapping("/{id}")
-   public UserDTO findById(@PathVariable long id) {
+   public UserDTO findById(@PathVariable Long id) {
        return userService.findById(id); 
    }
    
@@ -45,7 +45,7 @@ public class UserController {
    } 
 
    @DeleteMapping("/{id}")
-   public UserDTO delete(@PathVariable long id) {
+   public UserDTO delete(@PathVariable Long id) {
         return userService.delete(id);
    } 
 

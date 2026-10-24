@@ -25,7 +25,7 @@ public class UserService {
                 .collect(Collectors.toList());
     }
 
-    public UserDTO findById(long userId) {
+    public UserDTO findById(Long userId) {
         Optional<User> user = userRepository.findById(userId);
         if (user.isPresent()) {
             return UserDTO.convert(user.get());
@@ -38,7 +38,7 @@ public class UserService {
         return UserDTO.convert(user);
     }
 
-    public UserDTO delete(long userId) {
+    public UserDTO delete(Long userId) {
         Optional<User> user = userRepository.findById(userId);
         if (user.isPresent()) {
             userRepository.delete(user.get());

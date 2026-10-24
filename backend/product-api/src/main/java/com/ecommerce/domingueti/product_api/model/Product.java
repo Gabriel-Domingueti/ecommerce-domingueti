@@ -13,20 +13,20 @@ import jakarta.persistence.ManyToOne;
 public class Product {
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String productIdentifier;
     private String nome;
     private String descricao;
-    private double preco;
+    private Double preco;
 
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -51,10 +51,10 @@ public class Product {
         this.nome = nome;
     }
 
-    public double getPreco() {
+    public Double getPreco() {
         return preco;
     }
-    public void setPreco(double preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
